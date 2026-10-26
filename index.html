@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* Basic styling to make it look clean and modern */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        header {
+            background: #24292e;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .section {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        /* Creates the two-column side-by-side layout */
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 30px; /* Space between the text and the image */
+        }
+
+        /* Ensures text takes up more room than the photo */
+        .about-text {
+            flex: 2;
+        }
+
+        .about-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Styles the image size and shape */
+        .profile-pic {
+            max-width: 180px;
+            width: 100%;
+            height: auto;
+            border-radius: 50%; /* Makes it a circle */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a soft drop shadow */
+        }
+
+        /* Styling for the social buttons container */
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 12px;
+        }
+
+        /* Base button styles */
+        .social-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-2px); /* Slight lift effect on hover */
+        }
+
+        /* GitHub specific brand color */
+        .github-btn {
+            background-color: #24292e;
+            color: #ffffff;
+        }
+        .github-btn:hover {
+            background-color: #444d56;
+        }
+
+        /* LinkedIn specific brand color */
+        .linkedin-btn {
+            background-color: #0077b5;
+            color: #ffffff;
+        }
+        .linkedin-btn:hover {
+            background-color: #005987;
+        }
+
+        /* Responsive adjustment: stacks them on small phone screens */
+        @media (max-width: 600px) {
+            .about-container {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .social-links {
+                justify-content: center;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- About Section -->
+        <section id="about" class="section about-container">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>Hi there! I am a math geek. I love poker, heavy metal, Russian literature, fast cars, board and first person shooting games and existential philosophy. 
+                  I'd like to get into a career in finance (trading or PE). My name literally translates to 'trader' in my native language:)</p>
+                
+                <!-- Social Links Container -->
+                <div class="social-links">
+                    <a href="https://github.com" target="_blank" class="social-btn github-btn">GitHub</a>
+                    <a href="https://linkedin.com" target="_blank" class="social-btn linkedin-btn">LinkedIn</a>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="IMG_5271.PNG" alt="A photo of me" class="profile-pic">
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2>My Projects</h2>
+            <ul>
+                <li><strong>Project One:</strong> Riichi Mahjong agent</li>
+                <li><strong>Project Two:</strong> Market Risk & P&L Attribution Framework</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>You can find me on GitHub or reach out via email at shraumare@gmail.com.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 My Website</p>
+    </footer>
+
+</body>
+</html>
